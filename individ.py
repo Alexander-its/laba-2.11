@@ -5,12 +5,17 @@
 #экране результат ее работы. Функцию f придумайте самостоятельно (она должна что то
 #делать с двумя параметрами a , b и возвращать результат).
 
-def f(a, b):
-    return a + b
+#!/usr/bin/env python3
+# -*- coding: utf -8 -*-
 
-def foo(a, b, func):
-    def inner(a, b):
-        return f"ДЛя значений a, b функция {func(a,b) = }"
-    return inner(a, b)
+if __name__ == '__main__':
+    
+    def f(a, b):
+        return a + b
+    
+    def foo(a, b, func):
+        def inner(a, b):
+            return f"ДЛя значений a, b функция {func(a,b) = }"
+        return inner(a, b)
 
-print(foo(2, 7, f))
+    print(foo(2, 7, f))
